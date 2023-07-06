@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 
-class ContactsBodyScreen extends StatelessWidget {
-  const ContactsBodyScreen({super.key});
+class ContactsInviteBody extends StatelessWidget {
+  const ContactsInviteBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(
-              Icons.arrow_back_ios,
-              color: Colors.black,
-            )),
+    return Container(
+      color: Colors.white,
+    padding: const EdgeInsets.only(left: 25),
+      height: 50,
+      child: const Row(
+        children: [
+          Icon(Icons.people_alt_outlined,
+          color: Colors.grey,),
+          SizedBox(width: 20,),
+          Text("Invite Friends",
+         ),
+        ],
       ),
-    
     );
   }
 }

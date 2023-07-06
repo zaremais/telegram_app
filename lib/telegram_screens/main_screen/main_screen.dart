@@ -32,7 +32,7 @@ class MainScreen extends StatelessWidget {
         body: Column(
           children: [
             listBody(
-              url: "assets/images/frame.png",
+              url: "assets/images/world.png",
               name: "Lara",
               tym: '10:00 pm',
               desc: 'How are you',
@@ -43,7 +43,7 @@ class MainScreen extends StatelessWidget {
               height: 0.2,
             ),
                listBody(
-              url: "assets/images/frame.png",
+              url: "assets/images/world.png",
               name: "Lara",
               tym: '10:00 pm',
               desc: 'How are you',
@@ -68,7 +68,7 @@ class MainScreen extends StatelessWidget {
     return ListTile(
       contentPadding: const EdgeInsets.only(left: 10, top: 15),
       leading: CircleAvatar(
-        radius: 30,
+        radius: 25,
         backgroundImage: ExactAssetImage(url),
       ),
       title: Padding(
@@ -94,7 +94,9 @@ class MainScreen extends StatelessWidget {
           children: [
             Text(
               desc,
-              style: const TextStyle(fontWeight: FontWeight.w500),
+              style: const TextStyle(
+                fontWeight: FontWeight.w500,
+                color: Colors.grey),
             ),
             Container(
               height: 20,

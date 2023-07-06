@@ -1,4 +1,4 @@
-import 'package:first_app_1/telegram_screens/main_screen/main_screen.dart';
+import 'package:first_app_1/screens/create_contacts_screen/contacts_create_body/add_contacts_body.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +16,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const MainScreen());
+        home:const AddContactsBody());
   }
 }

@@ -8,22 +8,31 @@ class ImageGroupBody extends StatelessWidget {
     return Container(
       height: 100,
       color: Colors.white,
-      child: Row(
+      child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            CircleAvatar(
-              backgroundColor: Colors.blue,
-              child: Icon(
-                Icons.camera_alt,
-                color: Colors.white,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: CircleAvatar(
+                backgroundColor: Colors.blue,
+                child: Icon(
+                  Icons.add_a_photo,
+                  color: Colors.white,
+                ),
               ),
             ),
+            SizedBox(width: 10,),
             SizedBox(
-              width: 350,
-              child: TextField(decoration: InputDecoration(
-           
-                suffixIcon: Icon(Icons.face_2_outlined)
-              ),
+              width: 280,
+              child: Padding(
+                padding: EdgeInsets.only(right: 20),
+
+                child: TextField(
+                  decoration:
+                      InputDecoration(
+                        hintText: "Enter group name",
+                        suffixIcon: Icon(Icons.face_2_outlined)),
+                ),
               ),
             ),
           ]),

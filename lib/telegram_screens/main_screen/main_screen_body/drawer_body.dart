@@ -1,18 +1,17 @@
 import 'package:first_app_1/screens/create_contacts_screen/create_contacts_screen.dart';
 import 'package:first_app_1/screens/create_group_screen/create_group_screen.dart';
-import 'package:first_app_1/telegram_screens/main_screen/main_screen_body/contact_create.dart';
+
 import 'package:flutter/material.dart';
 
-import '../../../screens/create_contacts_screen/contacts_create_body/invate_body.dart';
 
 class DrawerBody extends StatelessWidget {
   const DrawerBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
+    return const Drawer(
       child: Column(
-        children: const [_ContainerWithImage(), ListSettings()],
+        children: [_ContainerWithImage(), ListSettings()],
       ),
     );
   }
@@ -50,9 +49,9 @@ class _ContainerWithImage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         "Bai",
                         style: TextStyle(
@@ -96,7 +95,7 @@ class _ListSettingsState extends State<ListSettings> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 600,
+      height: 390,
       child: ListView(children: [
         ListSettingsBody(
           text: "New group",

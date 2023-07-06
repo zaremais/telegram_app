@@ -1,5 +1,6 @@
 import 'package:first_app_1/global_widget/arrow_button.dart';
-import 'package:first_app_1/screens/create_group_screen/create_group_screen_body/group_list_view.dart';
+import 'package:first_app_1/global_widget/list_view_body.dart';
+// import 'package:first_app_1/screens/create_group_screen/create_group_screen_body/group_list_view.dart';
 import 'package:first_app_1/screens/create_group_screen/create_group_screen_body/invite_body.dart';
 import 'package:flutter/material.dart';
 
@@ -15,24 +16,24 @@ class CreateGroupScreen extends StatelessWidget {
         backgroundColor: Colors.blue,
         leading:
        const ArrowButton(),
-        title: Column(
+        title: const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Text(
                 "Создать группу",
                 style:
                     TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
               ),
               Text(
-                "до 2000000 участников",
+                "до 200000 участников",
                 style: TextStyle(fontSize: 14, color: Colors.white),
               )
             ]),
         centerTitle: false,
       ),
-      body: Column(children: const [
+      body: const Column(children: [
         InviteBody(),
-        GroupListViewBody(),
+        Expanded(child: ListViewBody()),
       ],
       ),
       floatingActionButton: FloatingActionButton(
